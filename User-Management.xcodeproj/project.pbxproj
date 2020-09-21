@@ -12,6 +12,16 @@
 		F92DFF83251602AF0052F73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92DFF81251602AF0052F73A /* LaunchScreen.storyboard */; };
 		F92DFF8E251602B00052F73A /* User_ManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFF8D251602B00052F73A /* User_ManagementTests.swift */; };
 		F92DFF99251602B00052F73A /* User_ManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFF98251602B00052F73A /* User_ManagementUITests.swift */; };
+		F92DFFAC2517D6340052F73A /* UMUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFFAB2517D6330052F73A /* UMUserModel.swift */; };
+		F92DFFAF2517D70C0052F73A /* UMLandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFFAE2517D70C0052F73A /* UMLandingVC.swift */; };
+		F9ABC04A2517EE5200BFC9E0 /* UMLandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0492517EE5200BFC9E0 /* UMLandingViewModel.swift */; };
+		F9ABC04D2517EF2700BFC9E0 /* KSNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC04C2517EF2700BFC9E0 /* KSNetworkManager.swift */; };
+		F9ABC04F2517EF8700BFC9E0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC04E2517EF8700BFC9E0 /* Reachability.swift */; };
+		F9ABC0522517EFD200BFC9E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0512517EFD200BFC9E0 /* Constants.swift */; };
+		F9ABC0542517FB7800BFC9E0 /* MVVMHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0532517FB7800BFC9E0 /* MVVMHelper.swift */; };
+		F9ABC0562517FBB900BFC9E0 /* UMUserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0552517FBB900BFC9E0 /* UMUserDataSource.swift */; };
+		F9ABC0582518021700BFC9E0 /* UMUserTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0572518021700BFC9E0 /* UMUserTVC.swift */; };
+		F9ABC05C25180E0800BFC9E0 /* UMUserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC05B25180E0800BFC9E0 /* UMUserDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +53,16 @@
 		F92DFF94251602B00052F73A /* User-ManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "User-ManagementUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92DFF98251602B00052F73A /* User_ManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_ManagementUITests.swift; sourceTree = "<group>"; };
 		F92DFF9A251602B00052F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F92DFFAB2517D6330052F73A /* UMUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserModel.swift; sourceTree = "<group>"; };
+		F92DFFAE2517D70C0052F73A /* UMLandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMLandingVC.swift; sourceTree = "<group>"; };
+		F9ABC0492517EE5200BFC9E0 /* UMLandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMLandingViewModel.swift; sourceTree = "<group>"; };
+		F9ABC04C2517EF2700BFC9E0 /* KSNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSNetworkManager.swift; sourceTree = "<group>"; };
+		F9ABC04E2517EF8700BFC9E0 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F9ABC0512517EFD200BFC9E0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9ABC0532517FB7800BFC9E0 /* MVVMHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMHelper.swift; sourceTree = "<group>"; };
+		F9ABC0552517FBB900BFC9E0 /* UMUserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserDataSource.swift; sourceTree = "<group>"; };
+		F9ABC0572518021700BFC9E0 /* UMUserTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserTVC.swift; sourceTree = "<group>"; };
+		F9ABC05B25180E0800BFC9E0 /* UMUserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +113,9 @@
 		F92DFF75251602AD0052F73A /* User-Management */ = {
 			isa = PBXGroup;
 			children = (
-				F92DFF76251602AD0052F73A /* AppDelegate.swift */,
-				F92DFF7F251602AF0052F73A /* Assets.xcassets */,
-				F92DFF81251602AF0052F73A /* LaunchScreen.storyboard */,
-				F92DFF84251602AF0052F73A /* Info.plist */,
+				F92DFFA92517CDC90052F73A /* Modules */,
+				F9ABC04B2517EF1100BFC9E0 /* Utils */,
+				F92DFFA62517BD0A0052F73A /* Supporting Files */,
 			);
 			path = "User-Management";
 			sourceTree = "<group>";
@@ -117,6 +136,121 @@
 				F92DFF9A251602B00052F73A /* Info.plist */,
 			);
 			path = "User-ManagementUITests";
+			sourceTree = "<group>";
+		};
+		F92DFFA62517BD0A0052F73A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F92DFF76251602AD0052F73A /* AppDelegate.swift */,
+				F92DFF7F251602AF0052F73A /* Assets.xcassets */,
+				F92DFF81251602AF0052F73A /* LaunchScreen.storyboard */,
+				F92DFF84251602AF0052F73A /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F92DFFA72517CD820052F73A /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				F92DFFAA2517D6200052F73A /* Model */,
+				F92DFFAD2517D6970052F73A /* View */,
+				F9ABC0482517EE3700BFC9E0 /* ViewModel */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		F92DFFA82517CD8C0052F73A /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC05925180DCB00BFC9E0 /* View */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		F92DFFA92517CDC90052F73A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F92DFFA72517CD820052F73A /* Landing */,
+				F92DFFA82517CD8C0052F73A /* UserDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F92DFFAA2517D6200052F73A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F92DFFAB2517D6330052F73A /* UMUserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F92DFFAD2517D6970052F73A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9D0F1262517E44D00D29B24 /* Cell */,
+				F9D0F1252517E44400D29B24 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9ABC0482517EE3700BFC9E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC0492517EE5200BFC9E0 /* UMLandingViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		F9ABC04B2517EF1100BFC9E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC0502517EFA900BFC9E0 /* Manager */,
+				F9ABC0512517EFD200BFC9E0 /* Constants.swift */,
+				F9ABC0532517FB7800BFC9E0 /* MVVMHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F9ABC0502517EFA900BFC9E0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC04C2517EF2700BFC9E0 /* KSNetworkManager.swift */,
+				F9ABC04E2517EF8700BFC9E0 /* Reachability.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F9ABC05925180DCB00BFC9E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC05A25180DCF00BFC9E0 /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9ABC05A25180DCF00BFC9E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC05B25180E0800BFC9E0 /* UMUserDetailsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9D0F1252517E44400D29B24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F92DFFAE2517D70C0052F73A /* UMLandingVC.swift */,
+				F9ABC0552517FBB900BFC9E0 /* UMUserDataSource.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9D0F1262517E44D00D29B24 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F9ABC0572518021700BFC9E0 /* UMUserTVC.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +315,7 @@
 		F92DFF6B251602AD0052F73A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = UM;
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Kedar Sukerkar";
@@ -249,7 +384,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ABC0562517FBB900BFC9E0 /* UMUserDataSource.swift in Sources */,
+				F92DFFAC2517D6340052F73A /* UMUserModel.swift in Sources */,
+				F9ABC0542517FB7800BFC9E0 /* MVVMHelper.swift in Sources */,
 				F92DFF77251602AD0052F73A /* AppDelegate.swift in Sources */,
+				F9ABC04F2517EF8700BFC9E0 /* Reachability.swift in Sources */,
+				F9ABC04A2517EE5200BFC9E0 /* UMLandingViewModel.swift in Sources */,
+				F9ABC0582518021700BFC9E0 /* UMUserTVC.swift in Sources */,
+				F9ABC05C25180E0800BFC9E0 /* UMUserDetailsVC.swift in Sources */,
+				F9ABC0522517EFD200BFC9E0 /* Constants.swift in Sources */,
+				F92DFFAF2517D70C0052F73A /* UMLandingVC.swift in Sources */,
+				F9ABC04D2517EF2700BFC9E0 /* KSNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "User-Management/Info.plist";
+				INFOPLIST_FILE = "User-Management/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,7 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "User-Management/Info.plist";
+				INFOPLIST_FILE = "User-Management/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
