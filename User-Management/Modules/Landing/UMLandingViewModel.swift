@@ -37,7 +37,7 @@ class UMLandingViewModel {
 
     
     // MARK: - Network Requests
-    func fetchUsersList() {
+    func fetchUsersList(completion: ((Result<[UMUserModel], Error>) -> Void)? = nil) {
         KSNetworkManager.shared.sendRequest(baseUrl: AppURLs.base,methodType: .get, apiName: AppURLs.getUsersList, parameters: nil, headers: nil) { (result) in
             switch result{
             case .success(let data):
@@ -45,13 +45,16 @@ class UMLandingViewModel {
                     switch result{
                     case .success(let data):
                         self?.usersList  = data
+                        completion?(.success(data))
                         self?.errorOccured.value = false
-                    case .failure(_):
+                    case .failure(let error):
+                        completion?(.failure(error))
                         self?.errorOccured.value = true
                     }
                 }
                 
-            case .failure(_):
+            case .failure(let error):
+                completion?(.failure(error))
                 self.errorOccured.value = true
             }
 
@@ -68,13 +71,11 @@ class UMLandingViewModel {
 }
 
 extension UMLandingViewModel: UMLandingViewModelProtocol{
+    
     func toggleUserFavourite(user: UMUserModel) {
-        let modifiedUser = self.usersList.first(where: {$0.id == user.id})
-        modifiedUser?.isFavourite = user.isFavourite
-    }
-    
+        guard let modifiedUserIndex = self.usersList.firstIndex(where: {$0.id == user.id}) else{return}
         
-    
-    
+        self.usersList[modifiedUserIndex].isFavourite = user.isFavourite
+    }
 }
 

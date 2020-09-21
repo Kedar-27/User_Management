@@ -10,7 +10,6 @@
 		F92DFF77251602AD0052F73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFF76251602AD0052F73A /* AppDelegate.swift */; };
 		F92DFF80251602AF0052F73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92DFF7F251602AF0052F73A /* Assets.xcassets */; };
 		F92DFF83251602AF0052F73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92DFF81251602AF0052F73A /* LaunchScreen.storyboard */; };
-		F92DFF8E251602B00052F73A /* User_ManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFF8D251602B00052F73A /* User_ManagementTests.swift */; };
 		F92DFF99251602B00052F73A /* User_ManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFF98251602B00052F73A /* User_ManagementUITests.swift */; };
 		F92DFFAC2517D6340052F73A /* UMUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFFAB2517D6330052F73A /* UMUserModel.swift */; };
 		F92DFFAF2517D70C0052F73A /* UMLandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DFFAE2517D70C0052F73A /* UMLandingVC.swift */; };
@@ -22,6 +21,8 @@
 		F9ABC0562517FBB900BFC9E0 /* UMUserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0552517FBB900BFC9E0 /* UMUserDataSource.swift */; };
 		F9ABC0582518021700BFC9E0 /* UMUserTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0572518021700BFC9E0 /* UMUserTVC.swift */; };
 		F9ABC05C25180E0800BFC9E0 /* UMUserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC05B25180E0800BFC9E0 /* UMUserDetailsVC.swift */; };
+		F9ABC05F25189B5E00BFC9E0 /* UMLanding_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC05E25189B5E00BFC9E0 /* UMLanding_Tests.swift */; };
+		F9ABC0612518A06600BFC9E0 /* UMUserDetails_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABC0602518A06600BFC9E0 /* UMUserDetails_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,6 @@
 		F92DFF82251602AF0052F73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F92DFF84251602AF0052F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92DFF89251602B00052F73A /* User-ManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "User-ManagementTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F92DFF8D251602B00052F73A /* User_ManagementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_ManagementTests.swift; sourceTree = "<group>"; };
 		F92DFF8F251602B00052F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92DFF94251602B00052F73A /* User-ManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "User-ManagementUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92DFF98251602B00052F73A /* User_ManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_ManagementUITests.swift; sourceTree = "<group>"; };
@@ -63,6 +63,9 @@
 		F9ABC0552517FBB900BFC9E0 /* UMUserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserDataSource.swift; sourceTree = "<group>"; };
 		F9ABC0572518021700BFC9E0 /* UMUserTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserTVC.swift; sourceTree = "<group>"; };
 		F9ABC05B25180E0800BFC9E0 /* UMUserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserDetailsVC.swift; sourceTree = "<group>"; };
+		F9ABC05D25189B5D00BFC9E0 /* User-ManagementTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User-ManagementTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F9ABC05E25189B5E00BFC9E0 /* UMLanding_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMLanding_Tests.swift; sourceTree = "<group>"; };
+		F9ABC0602518A06600BFC9E0 /* UMUserDetails_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMUserDetails_Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +126,10 @@
 		F92DFF8C251602B00052F73A /* User-ManagementTests */ = {
 			isa = PBXGroup;
 			children = (
-				F92DFF8D251602B00052F73A /* User_ManagementTests.swift */,
 				F92DFF8F251602B00052F73A /* Info.plist */,
+				F9ABC05D25189B5D00BFC9E0 /* User-ManagementTests-Bridging-Header.h */,
+				F9ABC05E25189B5E00BFC9E0 /* UMLanding_Tests.swift */,
+				F9ABC0602518A06600BFC9E0 /* UMUserDetails_Tests.swift */,
 			);
 			path = "User-ManagementTests";
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 					};
 					F92DFF88251602B00052F73A = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 						TestTargetID = F92DFF72251602AD0052F73A;
 					};
 					F92DFF93251602B00052F73A = {
@@ -402,7 +408,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F92DFF8E251602B00052F73A /* User_ManagementTests.swift in Sources */,
+				F9ABC05F25189B5E00BFC9E0 /* UMLanding_Tests.swift in Sources */,
+				F9ABC0612518A06600BFC9E0 /* UMUserDetails_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +601,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "User-ManagementTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -604,6 +612,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ked27.User-ManagementTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "User-ManagementTests/User-ManagementTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/User-Management.app/User-Management";
@@ -615,6 +625,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "User-ManagementTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -625,6 +636,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ked27.User-ManagementTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "User-ManagementTests/User-ManagementTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/User-Management.app/User-Management";

@@ -96,16 +96,19 @@ class UMUserDetailsVC: UIViewController {
     lazy var favButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "favButton"
         return button
     }()
 
 
 
     // MARK: - Properties
-    private var userData: UMUserModel
+    var userData: UMUserModel
     
-    private let goldColor = UIColor(red: 255/255.0, green: 215/255.0, blue: 0/255.0, alpha: 1)
-     
+    let starImage = UIImage(systemName: "star.fill")?.withTintColor(goldColor, renderingMode: .alwaysOriginal)
+    
+    
+    let starOutlineImage = UIImage(systemName: "star")?.withTintColor(goldColor, renderingMode: .alwaysOriginal)
     
     
     
@@ -155,6 +158,9 @@ class UMUserDetailsVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.black
         self.navigationItem.title = "Details"
         
+        self.view.accessibilityIdentifier = "User Details"
+        self.starOutlineImage?.accessibilityIdentifier = "starOutlineImage"
+        self.starImage?.accessibilityIdentifier = "starImage"
         
         self.favButton.addTarget(self, action: #selector(self.favButtonClicked), for: .touchUpInside)
     }
@@ -206,13 +212,13 @@ class UMUserDetailsVC: UIViewController {
     
     private func setupUserData(){
         self.nameLabel.text = "Name: " + self.userData.name
-        self.addressLabel.text = "Address: " +  self.userData.address.city
-        self.companyLabel.text = "Company: " +  self.userData.company.name
+        self.addressLabel.text = "Address: " +  (self.userData.address?.city ?? "")
+        self.companyLabel.text = "Company: " +  (self.userData.company?.name ?? "")
         self.phoneLabel.text = "Phone: " + self.userData.phone
         self.userNameLabel.text = "Username: " + self.userData.username
         self.websiteLabel.text = "Website: " + self.userData.website
     
-        let image = (self.userData.isFavourite ?? false) ?  UIImage(systemName: "star.fill")?.withTintColor(goldColor, renderingMode: .alwaysOriginal) : UIImage(systemName: "star")?.withTintColor(goldColor, renderingMode: .alwaysOriginal)
+        let image = (self.userData.isFavourite ?? false) ?  starImage : starOutlineImage
         
         self.favButton.setBackgroundImage(image, for: .normal)
     }
@@ -222,10 +228,12 @@ class UMUserDetailsVC: UIViewController {
     // MARK: - Selectors
     @objc func favButtonClicked(){
         self.userData.toggleIsFavourite()
-        let image = (self.userData.isFavourite ?? false) ?  UIImage(systemName: "star.fill")?.withTintColor(goldColor, renderingMode: .alwaysOriginal) : UIImage(systemName: "star")?.withTintColor(goldColor, renderingMode: .alwaysOriginal)
+        
+                
+        let image = (self.userData.isFavourite ?? false) ?  starImage : starOutlineImage
         
         self.delegate?.toggleUserFavourite(user: userData)
-        
+        self.favButton.accessibilityIdentifier = image?.accessibilityIdentifier
         self.favButton.setBackgroundImage(image, for: .normal)
     }
     

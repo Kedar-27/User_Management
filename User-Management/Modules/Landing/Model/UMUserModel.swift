@@ -10,15 +10,15 @@ import Foundation
 
 
 // MARK: - UMUserModel
-class UMUserModel: Codable {
+struct UMUserModel: Codable {
     let id: Int
     let name, username, email: String
-    let address: Address
+    let address: Address?
     let phone, website: String
-    let company: Company
+    let company: Company?
     var isFavourite: Bool?
     
-    func toggleIsFavourite(){
+    mutating func toggleIsFavourite(){
         self.isFavourite = !(self.isFavourite ?? false)
     }
 }

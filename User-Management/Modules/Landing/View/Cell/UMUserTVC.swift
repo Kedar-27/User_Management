@@ -124,9 +124,7 @@ class UMUserTVC: UITableViewCell {
         self.nameLabel.text = name
         self.phoneLabel.text = phone
         self.websiteLabel.text = website
-        
-        let goldColor = UIColor(red: 255/255.0, green: 215/255.0, blue: 0/255.0, alpha: 1)
-        
+                
         self.starImageView.image = isFavourite ?  UIImage(systemName: "star.fill")?.withTintColor(goldColor, renderingMode: .alwaysOriginal) : UIImage(systemName: "star")?.withTintColor(goldColor, renderingMode: .alwaysOriginal)
     }
     

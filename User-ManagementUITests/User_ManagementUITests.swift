@@ -7,37 +7,93 @@
 //
 
 import XCTest
+@testable import User_Management
+
 
 class User_ManagementUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var app: XCUIApplication!
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+    // MARK: - XCTestCase
+    override func setUp() {
+        super.setUp()
+
         continueAfterFailure = false
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+    // MARK: - Tests
+    func testHomeVCLaunched() {
         app.launch()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Make sure we're displaying Landing Screen
+        XCTAssertTrue(app.otherElements["Home"].exists)
+
+        // Swipe three times to go through the pages
+        app.swipeUp()
+        app.swipeUp()
+        app.swipeDown()
+    }
+    
+    
+    func testUserDetailsNavigation(){
+        app.launch()
+
+        app.swipeUp()
+        
+        let usersListTable = app.tables
+        
+        usersListTable.cells.element(matching: .cell, identifier: "userscell3").tap()
+        
+        XCTAssertTrue(app.otherElements["User Details"].exists)
+        
+        
+    }
+    
+    
+    func testFavouriteToggling(){
+        app.launch()
+
+        app.swipeUp()
+
+        let usersListTable = app.tables
+        let fourthUser = usersListTable.cells.element(matching: .cell, identifier: "userscell4")
+        fourthUser.tap()
+        
+        var favButton = app.buttons["favButton"]
+        favButton.tap()
+        
+        let starImageButton = app.buttons["starImage"]
+        favButton = starImageButton
+        
+        XCTAssertTrue(starImageButton.exists)
+    }
+    
+    func testFavouriteFeaturePersistence(){
+        app.launch()
+
+        app.swipeUp()
+
+        let usersListTable = app.tables
+        let fourthUser = usersListTable.cells.element(matching: .cell, identifier: "userscell4")
+        fourthUser.tap()
+        
+        var favButton = app.buttons["favButton"]
+        favButton.tap()
+        
+        let starImageButton = app.buttons["starImage"]
+        favButton = starImageButton
+        XCTAssertTrue(favButton.exists)
+        
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+
+        fourthUser.tap()
+        XCTAssertTrue(favButton.exists)
+        
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+    
+    
 }

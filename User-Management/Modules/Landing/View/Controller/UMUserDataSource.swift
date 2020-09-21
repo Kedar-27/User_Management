@@ -19,7 +19,7 @@ class UMUserDataSource:GenericDataSource<UMUserModel>, UITableViewDataSource{
 
         let user = self.data.value[indexPath.row]
         cell.configureCell(name: user.name, phone: user.phone, website: user.website, isFavourite: user.isFavourite ?? false)
-
+        cell.accessibilityIdentifier = "userscell\(indexPath.row)"
         return cell
 
     }

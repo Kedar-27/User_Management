@@ -82,7 +82,7 @@ class UMLandingVC: UIViewController {
     
     private func setupVC(){
         self.view.backgroundColor = .white
-        
+        self.view.accessibilityIdentifier = "Home"
         self.landingViewModel = UMLandingViewModel(dataSource: self.datasource)
     }
     
@@ -136,6 +136,7 @@ class UMLandingVC: UIViewController {
         self.activityIndicator.startAnimating()
         self.landingViewModel.fetchUsersList()
         
+                
     }
 
     
